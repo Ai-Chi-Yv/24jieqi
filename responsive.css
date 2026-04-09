@@ -218,8 +218,10 @@
   
   /* 游戏容器优化 */
   #interactive .max-w-4xl {
-    margin: 0 1rem;
+    margin: 0 auto;
+    max-width: 95%;
     padding: 1.5rem;
+    text-align: center;
   }
   
   /* 游戏选项卡优化 */
@@ -227,6 +229,35 @@
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  
+  /* 游戏选项卡容器优化 */
+  #interactive .flex {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* 游戏内容居中 */
+  .game-content {
+    text-align: center;
+  }
+  
+  /* 游戏按钮居中 */
+  #interactive .flex.space-x-4 {
+    justify-content: center;
+  }
+  
+  /* 知识竞答选项居中 */
+  #quiz-options {
+    text-align: left;
+  }
+  
+  /* 拼图和记忆游戏容器居中 */
+  #puzzle-container,
+  #memory-container {
+    margin: 0 auto;
+    max-width: 300px;
   }
   
   /* 四季轮播图优化 */
@@ -335,6 +366,20 @@
   a {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    cursor: pointer;
+  }
+  
+  /* 按钮触摸反馈 */
+  button:active,
+  a:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+  
+  /* 卡片触摸效果 */
+  .term-card:active,
+  .building-card:active {
+    transform: scale(0.98);
   }
   
   /* 滚动条优化 */
@@ -357,6 +402,99 @@
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+  }
+  
+  /* 手机端图片优化 */
+  img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 手机端卡片优化 */
+  .term-card,
+  .building-card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* 手机端按钮优化 */
+  a.bg-gold,
+  button.bg-gold {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+  }
+  
+  /* 手机端标题优化 */
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
+  
+  /* 手机端间距优化 */
+  section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  
+  /* 手机端模态框优化 */
+  #detail-modal .max-w-5xl {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  /* 手机端音频控制优化 */
+  .audio-control {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 手机端地图容器优化 */
+  #map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 手机端游戏容器优化 */
+  #interactive .max-w-4xl {
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 手机端四季轮播优化 */
+  .season-carousel {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* 手机端文字优化 */
+  p {
+    line-height: 1.6;
+  }
+  
+  /* 手机端响应式字体 */
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+  
+  /* 手机端加载优化 */
+  .fade-in {
+    transition: all 0.8s ease-out;
+  }
+  
+  /* 手机端动画优化 */
+  @keyframes inkSpread,
+  @keyframes inkCharReveal {
+    animation-timing-function: ease-out;
   }
 }
 
