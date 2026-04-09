@@ -1,0 +1,518 @@
+/* ========== 响应式优化样式表 ========== */
+
+/* =======================================
+   电脑端优化 (1024px 以上)
+   ======================================= */
+
+@media (min-width: 1024px) {
+  /* 导航栏优化 */
+  nav .container {
+    max-width: 1200px;
+  }
+  
+  /* 英雄区优化 */
+  #home {
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+  
+  #home h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #home p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  /* 按钮优化 */
+  #home .flex a {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+  
+  /* 24节气容器优化 */
+  #terms-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  /* 古建容器优化 */
+  #buildings-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  /* 卡片悬停效果增强 */
+  .term-card:hover,
+  .building-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 40px -15px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* 地图容器优化 */
+  #map-container {
+    height: 600px;
+  }
+  
+  /* 游戏容器优化 */
+  #interactive .max-w-4xl {
+    max-width: 5xl;
+  }
+  
+  /* 四季轮播图优化 */
+  .carousel-track img {
+    width: 320px;
+    height: 200px;
+  }
+  
+  /* 模态框优化 */
+  #detail-modal .max-w-5xl {
+    max-width: 6xl;
+  }
+  
+  /* 页脚优化 */
+  footer .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* 音频控制栏优化 */
+  .audio-control {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+  }
+  
+  .audio-control .volume {
+    width: 120px;
+  }
+  
+  /* 游戏选项卡优化 */
+  .game-tab {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  /* 拼图游戏优化 */
+  #puzzle-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+  /* 记忆游戏优化 */
+  #memory-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* =======================================
+   大屏幕电脑端优化 (1440px 以上)
+   ======================================= */
+
+@media (min-width: 1440px) {
+  /* 容器宽度优化 */
+  .container {
+    max-width: 1400px;
+  }
+  
+  /* 英雄区优化 */
+  #home h1 {
+    font-size: 5.5rem;
+  }
+  
+  #home p {
+    font-size: 1.75rem;
+    max-width: 700px;
+  }
+  
+  /* 24节气容器优化 */
+  #terms-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  /* 古建容器优化 */
+  #buildings-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* 地图容器优化 */
+  #map-container {
+    height: 700px;
+  }
+  
+  /* 四季轮播图优化 */
+  .carousel-track img {
+    width: 360px;
+    height: 220px;
+  }
+}
+
+/* =======================================
+   手机端优化 (768px 以下)
+   ======================================= */
+
+@media (max-width: 768px) {
+  /* 基础样式优化 */
+  body {
+    font-size: 16px;
+  }
+  
+  /* 导航栏优化 */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  /* 英雄区优化 */
+  #home {
+    min-height: 90vh;
+  }
+  
+  #home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #home p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  /* 按钮优化 */
+  #home .flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #home .flex a {
+    width: 80%;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  /* 24节气容器优化 */
+  #terms-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  /* 古建容器优化 */
+  #buildings-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* 地图容器优化 */
+  #map-container {
+    height: 400px;
+  }
+  
+  /* 游戏容器优化 */
+  #interactive .max-w-4xl {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+  
+  /* 游戏选项卡优化 */
+  .game-tab {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 四季轮播图优化 */
+  .carousel-track {
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+  }
+  
+  .carousel-track img {
+    width: 160px;
+    height: 100px;
+  }
+  
+  /* 模态框优化 */
+  #detail-modal .max-w-5xl {
+    margin: 1rem;
+    max-height: 90vh;
+  }
+  
+  #modal-body {
+    padding: 1.5rem;
+    max-height: 70vh;
+  }
+  
+  /* 页脚优化 */
+  footer .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  /* 音频控制栏优化 */
+  .audio-control {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-radius: 25px;
+  }
+  
+  .audio-control button {
+    font-size: 1rem;
+  }
+  
+  .audio-control .volume {
+    width: 60px;
+  }
+  
+  /* 游戏内容优化 */
+  .game-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* 拼图游戏优化 */
+  #puzzle-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+  }
+  
+  /* 记忆游戏优化 */
+  #memory-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  /* 知识竞答优化 */
+  #quiz-options {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  /* 卡片优化 */
+  .term-card,
+  .building-card {
+    margin-bottom: 1rem;
+  }
+  
+  /* 图片优化 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* 间距优化 */
+  section {
+    padding: 10rem 0;
+  }
+  
+  /* 标题优化 */
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  /* 描述文字优化 */
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  /* 触摸交互优化 */
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  /* 滚动条优化 */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* 防止文字选择 */
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* 允许输入框选择 */
+  input,
+  textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+}
+
+/* =======================================
+   小屏幕手机端优化 (480px 以下)
+   ======================================= */
+
+@media (max-width: 480px) {
+  /* 英雄区优化 */
+  #home h1 {
+    font-size: 2rem;
+  }
+  
+  #home p {
+    font-size: 0.875rem;
+  }
+  
+  /* 24节气容器优化 */
+  #terms-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* 游戏选项卡优化 */
+  .game-tab {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  /* 四季轮播图优化 */
+  .carousel-track img {
+    width: 140px;
+    height: 90px;
+  }
+  
+  /* 音频控制栏优化 */
+  .audio-control {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+  }
+  
+  /* 地图容器优化 */
+  #map-container {
+    height: 300px;
+  }
+  
+  /* 模态框优化 */
+  #modal-body {
+    padding: 1rem;
+  }
+  
+  /* 标题优化 */
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* =======================================
+   横屏手机优化
+   ======================================= */
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  /* 英雄区优化 */
+  #home {
+    min-height: 120vh;
+  }
+  
+  /* 地图容器优化 */
+  #map-container {
+    height: 500px;
+  }
+  
+  /* 24节气容器优化 */
+  #terms-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* 古建容器优化 */
+  #buildings-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =======================================
+   性能优化
+   ======================================= */
+
+/* 硬件加速 */
+.term-card,
+.building-card,
+.game-tab,
+.carousel-track img {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* 减少重排 */
+.audio-control,
+nav,
+#detail-modal {
+  will-change: transform;
+}
+
+/* 图片懒加载占位 */
+img {
+  background-color: #f0ece4;
+  background-image: linear-gradient(45deg, #e8e0d5 25%, transparent 25%, transparent 50%, #e8e0d5 50%, #e8e0d5 75%, transparent 75%, transparent);
+  background-size: 10px 10px;
+  transition: opacity 0.3s ease;
+}
+
+img.loaded {
+  background: none;
+}
+
+/* 动画性能优化 */
+@keyframes inkSpread,
+@keyframes inkCharReveal,
+@keyframes fall,
+@keyframes fallWithSway {
+  will-change: transform, opacity;
+}
+
+/* =======================================
+   无障碍优化
+   ======================================= */
+
+/* 键盘导航 */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .term-card,
+  .building-card {
+    border: 2px solid #4A4A4A;
+  }
+  
+  .game-tab {
+    border: 2px solid currentColor;
+  }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
